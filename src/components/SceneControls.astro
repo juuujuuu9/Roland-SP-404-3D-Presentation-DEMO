@@ -1,0 +1,125 @@
+<div class="controls-panel">
+    <div class="control-section">
+        <h3>Camera Position</h3>
+        <div class="control-group">
+            <label>X: <span id="camera-x">0.68</span></label>
+            <input type="range" id="camera-x-control" min="-10" max="10" step="0.1" value="0.68">
+        </div>
+        <div class="control-group">
+            <label>Y: <span id="camera-y">0.27</span></label>
+            <input type="range" id="camera-y-control" min="-10" max="10" step="0.1" value="0.27">
+        </div>
+        <div class="control-group">
+            <label>Z: <span id="camera-z">2.08</span></label>
+            <input type="range" id="camera-z-control" min="-10" max="10" step="0.1" value="2.08">
+        </div>
+    </div>
+
+    <div class="control-section">
+        <h3>Model Position</h3>
+        <div class="control-group">
+            <label>X: <span id="model-x">0</span></label>
+            <input type="range" id="model-x-control" min="-10" max="10" step="0.1" value="0">
+        </div>
+        <div class="control-group">
+            <label>Y: <span id="model-y">0</span></label>
+            <input type="range" id="model-y-control" min="-10" max="10" step="0.1" value="0">
+        </div>
+        <div class="control-group">
+            <label>Z: <span id="model-z">0</span></label>
+            <input type="range" id="model-z-control" min="-10" max="10" step="0.1" value="0">
+        </div>
+    </div>
+
+    <div class="control-section">
+        <h3>Camera Look At</h3>
+        <div class="control-group">
+            <label>X: <span id="lookat-x">0.00</span></label>
+            <input type="range" id="lookat-x-control" min="-10" max="10" step="0.1" value="0.00">
+        </div>
+        <div class="control-group">
+            <label>Y: <span id="lookat-y">0.00</span></label>
+            <input type="range" id="lookat-y-control" min="-10" max="10" step="0.1" value="0.00">
+        </div>
+        <div class="control-group">
+            <label>Z: <span id="lookat-z">0.00</span></label>
+            <input type="range" id="lookat-z-control" min="-10" max="10" step="0.1" value="0.00">
+        </div>
+    </div>
+
+    <div class="control-section">
+        <h3>Zoom</h3>
+        <div class="control-group">
+            <label>Level: <span id="zoom-level">2.20</span></label>
+            <input type="range" id="zoom-control" min="0.1" max="5" step="0.1" value="2.20">
+        </div>
+    </div>
+
+    <div class="control-section">
+        <h3>Model Rotation</h3>
+        <div class="control-group">
+            <label>X: <span id="rotation-x">1.3</span></label>
+            <input type="range" id="rotation-x-control" min="-Math.PI" max="Math.PI" step="0.1" value="1.3">
+        </div>
+        <div class="control-group">
+            <label>Y: <span id="rotation-y">0</span></label>
+            <input type="range" id="rotation-y-control" min="-Math.PI" max="Math.PI" step="0.1" value="0">
+        </div>
+        <div class="control-group">
+            <label>Z: <span id="rotation-z">0</span></label>
+            <input type="range" id="rotation-z-control" min="-Math.PI" max="Math.PI" step="0.1" value="0">
+        </div>
+    </div>
+</div>
+
+<style>
+    .controls-panel {
+        position: fixed;
+        top: 2rem;
+        right: 2rem;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        max-width: 300px;
+        font-family: 'proxima-nova', sans-serif;
+        display: none;
+    }
+
+    .control-section {
+        margin-bottom: 1.5rem;
+    }
+
+    .control-section h3 {
+        margin: 0 0 0.5rem 0;
+        font-size: 1rem;
+        color: #333;
+    }
+
+    .control-group {
+        margin-bottom: 0.5rem;
+    }
+
+    .control-group label {
+        display: block;
+        margin-bottom: 0.25rem;
+        font-size: 0.9rem;
+        color: #666;
+    }
+
+    .control-group input[type="range"] {
+        width: 100%;
+        margin: 0.25rem 0;
+    }
+
+    .control-group span {
+        font-family: monospace;
+        font-size: 0.9rem;
+        color: #333;
+    }
+</style>
+
+<script>
+    // This script will be handled by the main Scene3d component
+</script> 

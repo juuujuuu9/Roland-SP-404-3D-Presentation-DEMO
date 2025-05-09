@@ -1,0 +1,11 @@
+Model Information:
+* title:	Roland SP-404MkII
+* source:	https://sketchfab.com/3d-models/roland-sp-404mkii-a3a39f5a166a490bbc7c9317c106b1e0
+* author:	BabyJack (https://sketchfab.com/BabyJack)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Roland SP-404MkII" (https://sketchfab.com/3d-models/roland-sp-404mkii-a3a39f5a166a490bbc7c9317c106b1e0) by BabyJack (https://sketchfab.com/BabyJack) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

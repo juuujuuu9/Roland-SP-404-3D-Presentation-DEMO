@@ -1,0 +1,92 @@
+---
+---
+
+<div class="logo-container">
+    <img src="/logo.png" alt="Roland" />
+</div>
+<div class="info-container">
+    <div class="text-display">
+        <div class="animated-text"></div>
+    </div>
+</div>
+<div class="logo-two-container">
+    <img src="/logo-2.png" alt="SP-404" />
+</div>
+
+<style>
+    .logo-container {
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+        z-index: 100;
+    }
+    .logo-container img {
+        width: 250px;
+        height: auto;
+    }
+    .logo-two-container {
+        position: absolute;
+        bottom: 2rem;
+        right: 3rem;
+        z-index: 100;
+    }
+    .logo-two-container img {
+        width: 200px;
+        height: auto;
+    }
+    .info-container {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        z-index: 100;
+        width: 100%;
+    }
+    .overlay-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 110;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .overlay-container img {
+        height: auto;
+        width: 100vw;
+        object-fit: cover;
+    }
+    .text-display {
+        position: relative;
+        min-height: 3em;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .animated-text {
+        text-align: right;
+        width: auto;
+        position: absolute;
+        font-family: 'proxima-nova', sans-serif;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 100%;
+        color: #000;
+        opacity: 0;
+        transform: translateY(10px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .animated-text.fade-in {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .animated-text.fade-out {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+</style>
+<script>
+    import { initUserInterface } from './userInterface.js';
+    initUserInterface();
+</script>
