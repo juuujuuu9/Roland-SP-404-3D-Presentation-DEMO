@@ -12,8 +12,8 @@ export function initUserInterface() {
     
     const textElement = document.querySelector('.animated-text');
     let currentIndex = 0;
-    const displayDuration = 3000; // How long each text stays visible
-    const transitionDuration = 800; // Fade transition time
+    const displayDuration = 4000; // How long each text stays visible
+    const transitionDuration = 1000; // Fade transition time
     
     function updateText() {
     // Fade out current text
