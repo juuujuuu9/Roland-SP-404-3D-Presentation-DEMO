@@ -12,7 +12,38 @@
 <div class="logo-two-container">
     <img src="/logo-2.png" alt="SP-404" />
 </div>
-
+<div class="menu-btn-container">
+    <img src="/menu-btn.png" alt="Menu" />
+</div>
+<div class="menu-container">
+    <a class="menu-item" target="_blank" href="https://vercel.com/juuujuuu9s-projects">
+        <svg
+            width="33%"
+            height="30%"
+            viewBox="0 0 76 65"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M37.5274 0L75.0548 65H0L37.5274 0Z" fill="#ffffff"/>
+        </svg>
+        <span class="menu-item-text">Vercel</span>
+    </a>
+    <a class="menu-item" target="_blank" href="https://github.com/juuujuuu9">
+        <img src="/github.png" alt="Menu Item 1" />
+        <span class="menu-item-text">Github</span>
+    </a>
+    <a class="menu-item" target="_blank" href="https://julianhardee.com">
+        <img src="/click.png" alt="Menu Item 1" />
+        <span class="menu-item-text">Website</span>
+    </a>
+    <a class="menu-item" target="_blank" href="mailto:juju.hardee@gmail.com">
+        <img src="/gmail-logo.png" alt="Menu Item 1" />
+        <span class="menu-item-text">Email</span>
+    </a>
+    <div class="menu-item close">
+        <img class="close-btn" src="/close-button.png" alt="Close" />
+        <span class="menu-item-text">Return</span>
+    </div>
+</div>
 <style>
     .logo-container {
         position: absolute;
@@ -38,37 +69,17 @@
     .info-container {
         position: absolute;
         bottom: 2rem;
-        right: 0;
-        left: 0;
+        left: 2rem;
         z-index: 100;
-        width: 100vw;
-    }
-    .overlay-container {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 110;
-        width: 100vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-    }
-    .overlay-container img {
-        height: auto;
-        width: 100vw;
-        object-fit: cover;
+        width: 500px;
     }
     .text-display {
         position: relative;
         min-height: 3em;
         display: flex;
-        justify-content: flex-end;
     }
     .animated-text {
         width: auto;
-        margin: 0 auto;
         font-family: 'proxima-nova', sans-serif;
         font-size: 2rem;
         font-weight: 700;
@@ -85,6 +96,79 @@
     .animated-text.fade-out {
         opacity: 0;
         transform: translateY(-10px);
+    }
+    .menu-btn-container {
+        position: absolute;
+        bottom: 2rem;
+        right: 2rem;
+        z-index: 100;
+    }
+    .menu-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 100000000;
+        background-color: #000;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 17%;
+        gap: 2rem;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.4s cubic-bezier(0.4,0,0.2,1), padding 0.4s cubic-bezier(0.4,0,0.2,1), opacity 0.4s cubic-bezier(0.4,0,0.2,1);
+        padding: 0;
+        pointer-events: none;
+        opacity: 0;
+    }
+    .menu-container.open {
+        height: 100vh;
+        padding: 2.5rem;
+        pointer-events: auto;
+        opacity: 1;
+    }
+    .menu-item {
+        text-decoration: none;
+        color: inherit;
+        background-color: transparent;
+        border: 3px solid #fff;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    .menu-item img,
+    .menu-item svg {
+        width: 33%;
+        height: 33%;
+        object-fit: contain;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+    .menu-item-text {
+        font-family: 'proxima-nova', sans-serif;
+        font-size: 1rem;
+        font-weight: 800;
+        line-height: 100%;
+        color: #fff;
+        text-transform: uppercase;
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        border: 2px solid #fff;
+        padding: 3px;
+        border-radius: 5px;
+    }
+    .menu-item.null {
+        border: none;
+    }
+    .close-btn {
+        z-index: 100;
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
     }
     @media (max-width: 768px) {
         .logo-container {
@@ -107,7 +191,35 @@
         }
         .info-container {
             bottom: 0rem;
+            left: 1rem;
+            width: 300px;
         }
+        .menu-btn-container {
+            bottom: 1.45rem;
+            right: 1rem;
+        }
+        .menu-btn-container img {
+            width: 1.5rem;
+            height: auto;
+        }
+    }
+    @keyframes orange-pulse {
+        0% {
+            box-shadow: 0 0 0 0 rgba(255,165,0, 0.7);
+            border-color: #FFA500;
+        }
+        70% {
+            box-shadow: 0 0 0 10px rgba(255,165,0, 0);
+            border-color: #FFA500;
+        }
+        100% {
+            box-shadow: 0 0 0 0 rgba(255,165,0, 0);
+            border-color: #fff;
+        }
+    }
+    .menu-item.pulse {
+        animation: orange-pulse 0.5s;
+        border-color: #FFA500 !important;
     }
 </style>
 <script>

@@ -46,4 +46,37 @@ export function initUserInterface() {
 }
 
 // Initialize when the DOM is loaded
-document.addEventListener('DOMContentLoaded', initUserInterface); 
+document.addEventListener('DOMContentLoaded', () => {
+    initUserInterface();
+    const menuBtn = document.querySelector('.menu-btn-container');
+    const menuContainer = document.querySelector('.menu-container');
+    if (menuBtn && menuContainer) {
+        menuBtn.addEventListener('click', () => {
+            menuContainer.classList.toggle('open');
+        });
+    }
+    // Add close functionality for the close menu item
+    const closeBtn = document.querySelector('.menu-item.close');
+    if (closeBtn && menuContainer) {
+        closeBtn.addEventListener('click', () => {
+            menuContainer.classList.remove('open');
+        });
+    }
+    // Pulse effect for menu items
+    document.querySelectorAll('.menu-item').forEach(item => {
+        item.addEventListener('mousedown', function(e) {
+            item.classList.remove('pulse');
+            void item.offsetWidth; // Force reflow
+            item.classList.add('pulse');
+            setTimeout(() => item.classList.remove('pulse'), 500);
+        });
+        
+        // For touch devices
+        item.addEventListener('touchstart', function(e) {
+            item.classList.remove('pulse');
+            void item.offsetWidth; // Force reflow
+            item.classList.add('pulse');
+            setTimeout(() => item.classList.remove('pulse'), 500);
+        });
+    });
+}); 
