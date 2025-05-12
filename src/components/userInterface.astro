@@ -27,7 +27,7 @@
     .logo-two-container {
         position: absolute;
         top: 2rem;
-        right: 3rem;
+        right: 2rem;
         z-index: 100;
     }
     .logo-two-container img {
@@ -85,6 +85,29 @@
     .animated-text.fade-out {
         opacity: 0;
         transform: translateY(-10px);
+    }
+    @media (max-width: 768px) {
+        .logo-container {
+            top: 1rem;
+            left: 1rem;
+        }
+        .logo-container img {
+            width: 125px;
+        }
+        .logo-two-container {
+            top: 1rem;
+            right: 1rem;
+        }
+        .logo-two-container img {
+            width: 100px;
+            margin-top: 5px;
+        }
+        .animated-text {
+            font-size: 1.25rem;
+        }
+        .info-container {
+            bottom: 0rem;
+        }
     }
 </style>
 <script>
